@@ -13,7 +13,7 @@
   (. (. sprites a) b))
 
 {
-  :load (loadSprites)
+  :load loadSprites
   :tileset tileset
   :sprites sprites
   :get get

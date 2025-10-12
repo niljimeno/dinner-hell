@@ -4,8 +4,10 @@
 (local sprites (require "sprites"))
 
 (fn love.load []
-  (. sprites :load))
+  (sprites.load))
+
+(fn love.update []
+  (player.update))
 
 (fn love.draw []
-  (love.graphics.draw (. sprites :tileset) ((. sprites :get) 1 1) 0 0 0 4)
-  (love.graphics.print "Hello World!" 400 300))
+  (player.draw))
