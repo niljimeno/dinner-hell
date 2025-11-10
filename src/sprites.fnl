@@ -2,8 +2,8 @@
 (global sprites {})
 
 (fn loadSprites []
-  (for [y 1 3] (let [row {}]
-    (for [x 1 3]
+  (for [y 1 8] (let [row {}]
+    (for [x 1 8]
       (table.insert row (love.graphics.newQuad
         (* (- x 1) 16) (* (- y 1) 16) 16 16
         (tileset.getDimensions tileset))))

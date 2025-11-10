@@ -39,7 +39,7 @@
   (set bullet.y (- bullet.y bullet-speed)))
 
 (fn is-out-of-bounds [bullet]
-  (< bullet (- (/ size 2))))
+  (< bullet.x (- (/ size 2))))
 
 (fn update-bullets []
   (each [i bullet (pairs bullets)]
@@ -75,8 +75,14 @@
     (. player-state :y)
     0 4))
 
+(fn get-position []
+  {
+    :x player-state.x
+    :y player-state.y
+  })
 
 {
+  :position get-position
   :update update
   :draw draw
 }

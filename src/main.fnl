@@ -2,12 +2,16 @@
 
 (local player (require "player"))
 (local sprites (require "sprites"))
+(local enemies (require "enemies"))
 
 (fn love.load []
-  (sprites.load))
+  (sprites.load)
+  (enemies.spawn-enemy))
 
 (fn love.update []
-  (player.update))
+  (player.update)
+  (enemies.update))
 
 (fn love.draw []
-  (player.draw))
+  (player.draw)
+  (enemies.draw))
